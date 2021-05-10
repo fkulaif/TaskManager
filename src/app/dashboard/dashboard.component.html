@@ -1,4 +1,4 @@
-<nav>
+<nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
     <li class="breadcrumb-item active">Dashboard</li>
@@ -104,10 +104,7 @@
                 Project A
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Project A</a>
-                <a class="dropdown-item" href="#">Project B</a>
-                <a class="dropdown-item" href="#">Project C</a>
-                <a class="dropdown-item" href="#">Project D</a>
+                <a class="dropdown-item" href="#" *ngFor="let project of Projects" >{{ project }}</a>
               </div>
             </div>
           </div>
@@ -119,13 +116,10 @@
                 id="dropdownMenuButton2"
                 data-toggle="dropdown"
               >
-                2019
+                2021
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">2019</a>
-                <a class="dropdown-item" href="#">2018</a>
-                <a class="dropdown-item" href="#">2017</a>
-                <a class="dropdown-item" href="#">2016</a>
+                <a class="dropdown-item" href="#" *ngFor="let year of Years">{{ year }}</a>
               </div>
             </div>
           </div>
