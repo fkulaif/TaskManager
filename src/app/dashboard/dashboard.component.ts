@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
   CurrentExpenditure: number;
   AvailableFunds: number;
   ToDay: Date;
+  Timezone: number;
 
   Clients: string[];
   Projects: string[];
@@ -77,34 +78,34 @@ export class DashboardComponent implements OnInit {
           { ID: 1, Name: 'Ford', Status: 'Available' },
           { ID: 2, Name: 'Miller', Status: 'Available' },
           { ID: 3, Name: 'Jones', Status: 'Busy' },
-          { ID: 4, Name: 'James', Status: 'Busy' },
+          { ID: 4, Name: 'Hamilton', Status: 'Busy' },
         ],
       },
       {
         Region: 'West',
         Members: [
-          { ID: 5, Name: 'Anna', Status: 'Available' },
-          { ID: 6, Name: 'Arun', Status: 'Available' },
-          { ID: 7, Name: 'Varun', Status: 'Busy' },
-          { ID: 8, Name: 'Jasmine', Status: 'Busy' },
+          { ID: 5, Name: 'Tyler', Status: 'Available' },
+          { ID: 6, Name: 'Charlie', Status: 'Available' },
+          { ID: 7, Name: 'Patrick', Status: 'Busy' },
+          { ID: 8, Name: 'Daniel', Status: 'Busy' },
         ],
       },
       {
         Region: 'South',
         Members: [
-          { ID: 9, Name: 'Krishna', Status: 'Available' },
-          { ID: 10, Name: 'Mohan', Status: 'Available' },
-          { ID: 11, Name: 'Raju', Status: 'Busy' },
-          { ID: 12, Name: 'Farooq', Status: 'Busy' },
+          { ID: 9, Name: 'Eden', Status: 'Available' },
+          { ID: 10, Name: 'Elias', Status: 'Available' },
+          { ID: 11, Name: 'Soloman', Status: 'Busy' },
+          { ID: 12, Name: 'Brianna', Status: 'Busy' },
         ],
       },
       {
         Region: 'North',
         Members: [
-          { ID: 13, Name: 'Jacob', Status: 'Available' },
-          { ID: 14, Name: 'Smith', Status: 'Available' },
-          { ID: 15, Name: 'Jones', Status: 'Busy' },
-          { ID: 16, Name: 'James', Status: 'Busy' },
+          { ID: 13, Name: 'Evans', Status: 'Available' },
+          { ID: 14, Name: 'Greenwald', Status: 'Available' },
+          { ID: 15, Name: 'Smith', Status: 'Busy' },
+          { ID: 16, Name: 'Roop', Status: 'Busy' },
         ],
       },
     ];

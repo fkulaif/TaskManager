@@ -6,7 +6,9 @@
 </nav>
 
 <h5>Dashboard</h5>
-<h6>{{ ToDay | date: "d/M/y" }}</h6>
+<!-- <h6>{{ ToDay | date: "M/d/y" }}</h6> -->
+<h6>{{ ToDay | date: "EEE - MMM d, y - h:mm a z"}}</h6>
+
 <div class="row">
   <div class="col-lg-3 pb-3" style="background-color: #e9e6e6">
     <div class="row">
