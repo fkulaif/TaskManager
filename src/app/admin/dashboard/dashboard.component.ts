@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from 'src/app/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,13 +17,16 @@ export class DashboardComponent implements OnInit {
   CurrentExpenditure: number;
   AvailableFunds: number;
   ToDay: Date;
-  Timezone: number;
 
   Clients: string[];
   Projects: string[];
   Years: number[] = [];
   TeamMembersSummary = [];
   TeamMembers = [];
+
+  constructor(private dashboardService:DashboardService){
+
+  }
 
   ngOnInit() {
     this.Designation = 'Team Leader';
@@ -48,28 +52,7 @@ export class DashboardComponent implements OnInit {
       this.Years.push(i);
     }
 
-    this.TeamMembersSummary = [
-      {
-        Region: 'East',
-        TeamMembersCount: 20,
-        TemporarilyUnavailableMembers: 4,
-      },
-      {
-        Region: 'West',
-        TeamMembersCount: 15,
-        TemporarilyUnavailableMembers: 8,
-      },
-      {
-        Region: 'South',
-        TeamMembersCount: 17,
-        TemporarilyUnavailableMembers: 1,
-      },
-      {
-        Region: 'North',
-        TeamMembersCount: 15,
-        TemporarilyUnavailableMembers: 6,
-      },
-    ];
+    this.TeamMembersSummary = this.dashboardService.getTeamMemberSummary();
 
     this.TeamMembers = [
       {
@@ -102,7 +85,7 @@ export class DashboardComponent implements OnInit {
       {
         Region: 'North',
         Members: [
-          { ID: 13, Name: 'Evans', Status: 'Available' },
+          { ID: 13, Name: 'Evans | Warren', Status: 'Available' },
           { ID: 14, Name: 'Greenwald', Status: 'Available' },
           { ID: 15, Name: 'Smith', Status: 'Busy' },
           { ID: 16, Name: 'Roop', Status: 'Busy' },
